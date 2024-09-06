@@ -1,0 +1,490 @@
+/* Variables globales */
+:root {
+    --primary-color: #dc3545; /* Color principal cambiado a rojo */
+    --text-color: #333; /* Color principal del texto */
+    --background-color: #fff; /* Color de fondo general */
+    --header-footer-bg: #000; /* Color de fondo para cabecera y pie de página */
+}
+
+/* Estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de que la fuente Roboto está cargada */
+    color: var(--text-color);
+}
+
+.index {
+    background-image: url('../img/inicio.jpg'); /* Ruta de la imagen de fondo */
+    background-color: var(--background-color);
+    background-size: cover; /* Asegura que la imagen cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* La imagen se queda fija en el fondo */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el ratón por encima para mejorar la accesibilidad */
+}
+
+/* Encabezado y pie de página */
+header {
+    background-color: var(--header-footer-bg);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navbar estilos */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Carrusel */
+.carousel-item {
+    text-align: center;
+    color: white;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente para mejorar la legibilidad */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Secciones de contenido */
+.container {
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+
+/* Estilos adicionales */
+.principal {
+  background: var(--background-color);
+  margin-bottom: 50px;
+}
+
+.principal .section-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+.col-md-6 {
+      text-align: justify;
+      font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+}
+
+
+.principal .row {
+    margin-bottom: 25px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+     margin-bottom: 20px;
+}
+
+/* Estilos de los botones */
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c82333; /* Color más oscuro en hover */
+}
+
+/* Estilos específicos para la página de registro */
+.background-image {
+    background-image: url('./assets/img/inicio.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+
+/* Estilos para tarjetas */
+#featured-photos {
+    background-color: #f8f9fa; /* Un fondo claro para destacar la sección */
+    padding: 20px 0;
+}
+
+#featured-photos .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+    transition: transform 0.3s ease-in-out; /* Efecto de transformación al pasar el ratón */
+}
+
+#featured-photos .card:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta al pasar el ratón */
+}
+
+#featured-photos .card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes cubran completamente el espacio asignado */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .navbar-nav .nav-link {
+        padding: 10px; /* Aumenta el padding para un mejor toque en pantallas táctiles */
+    }
+
+    header, .carousel-caption {
+        text-align: center; /* Asegura que todo esté centrado en dispositivos móviles */
+    }
+}
+
+/* Estilos del formulario de registro */
+.registro {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.registro h2 {
+    color: #dc3545; /* Color principal cambiado a rojo */
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+}
+
+.registro .form-group {
+    margin-bottom: 15px;
+}
+
+.registro .form-label {
+    color: #dc3545; /* Color principal cambiado a rojo */
+}
+
+.registro .form-control {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.registro .form-check-label {
+    color: #dc3545; /* Color principal cambiado a rojo */
+}
+
+.registro .btn {
+    background-color: #dc3545; /* Color principal cambiado a rojo */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.registro .btn:hover {
+    background-color: #c82333; /* Color más oscuro en hover */
+}
+
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Estilos del perfil */
+.perfil {
+    padding-top: 50px; /* Espacio entre el header y el contenido */
+    padding-bottom: 50px;
+}
+
+.perfil .row {
+    margin-bottom: 20px;
+}
+
+.perfil .card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
+}
+
+.perfil .card img {
+    height: 300px !important; /* Altura fija para las imágenes */
+    object-fit: cover !important; /* Asegura que las imágenes cubran completamente el espacio asignado */
+    width: 100% !important; /* Asegura que las imágenes cubran todo el ancho de la tarjeta */
+}
+
+.perfil .badge {
+    font-size: 0.9rem;
+}
+
+.perfil .nav-tabs {
+    border-bottom: 2px solid #dc3545; /* Color cambiado a rojo */
+}
+
+.perfil .nav-link {
+    color: #dc3545; /* Color cambiado a rojo */
+    font-weight: bold;
+}
+
+.perfil .nav-link.active {
+    color: #bd2130; /* Color cambiado a un rojo más oscuro */
+    border-color: #bd2130; /* Color cambiado a un rojo más oscuro */
+}
+
+/* Estilos de la sección "Sobre mí" */
+.perfil .d-flex {
+    margin-bottom: 15px;
+}
+
+.perfil h4 {
+    margin-bottom: 10px;
+}
+
+.perfil .d-flex a {
+    width: 100%;
+    text-align: center;
+}
+
+.perfil .d-flex .btn {
+    margin-bottom: 10px;
+}
+
+.profile-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon-wrapper i {
+    font-size: 150px; /* Ajusta el tamaño del icono */
+    color: #ccc; /* Color del icono */
+}
+
+/* Estilos adicionales para asegurar que las imágenes de los productos sean del mismo tamaño */
+.fixed-size-img {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-footer-bg);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: red;
+}
+
+.footer-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-item ul li {
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+/* Estilos específicos para el botón de "Subir productos" */
+.btn-subir-productos {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-subir-productos:hover {
+    background-color: #bd2130; /* Rojo más oscuro al pasar el ratón por encima */
+}
+
+/* Sidebar styles */
+#sidebar-wrapper {
+    width: 250px;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 10px 20px;
+}
+
+#sidebar-wrapper .list-group-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+.ver.container .mb-4 {
+    margin-bottom: 30px;
+}
+
+
+
+.jumbotron {
+    background-color: var(--background-color); /* Fondo blanco */
+    color: var(--text-color);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.jumbotron h2 {
+    color: var(--primary-color);
+}
+
+.text-danger {
+    color: var(--primary-color) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.badge {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+    object-fit: cover;
+}
+
+.quienes .mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+.product-image-wrapper img {
+    display: block;
+}
+
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+.product-image-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+
+.p-card:hover {
+    transform: none;
+    transition: none;
+}
+
+@media (max-width: 768px) {
+    #consejos-seguridad .card-body {
+        padding: 1rem; /* Reduce el padding en la versión móvil */
+    }
+    
+    #consejos-seguridad .card {
+        margin-bottom: 1rem; /* Reduce el margen inferior de las tarjetas */
+    }
+
+    .container.mt-5 {
+        margin-top: 2rem; /* Reduce el margen superior del contenedor principal */
+    }
+
+    .card-text {
+        margin-bottom: 0.5rem; /* Reduce el margen inferior del texto de las tarjetas */
+    }
+}
+.btn-link {
+    color: #dc3545;; /* Ajusta este valor al tono de rojo que desees */
+    text-decoration: none;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #911f2b;; /* Un tono más oscuro para el hover y focus */
+    text-decoration: none;
+}
+
+.btn-link.collapsed {
+    color: #dc3545;; /* Asegúrate de que los botones colapsados también tengan el color rojo */
+}
+
+
+
